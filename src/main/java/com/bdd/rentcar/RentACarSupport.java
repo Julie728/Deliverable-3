@@ -13,7 +13,9 @@ public class RentACarSupport {
 
     public void rentACar() {
         Car car = carDatabase.findAvailableCar();
-        car.rent();
+        if(car != null){
+        	car.rent();
+        }  
     }
 
     public int getAvailableNumberOfCars() {

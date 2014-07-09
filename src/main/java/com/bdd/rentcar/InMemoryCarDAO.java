@@ -4,13 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class InMemoryCarDAO implements CarDAO {
-    private static List<Car> cars;
-
-    public InMemoryCarDAO() {
-        if (cars == null) {
-            cars = new LinkedList<Car>();
-        }
-    }
+    private List<Car> cars = new LinkedList<Car>();
 
     public void add(Car car) {
         cars.add(car);
@@ -22,7 +16,7 @@ public class InMemoryCarDAO implements CarDAO {
                 return car;
             }
         }
-        throw new RuntimeException("No car available");
+        return null;
     }
 
     public int getNumberOfAvailableCars() {
@@ -34,4 +28,8 @@ public class InMemoryCarDAO implements CarDAO {
         }
         return availableCars;
     }
+    
+//    public void resetCars(){
+//    	cars = null;
+//    }
 }
