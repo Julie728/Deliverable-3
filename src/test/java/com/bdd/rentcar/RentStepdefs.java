@@ -6,6 +6,8 @@ import cucumber.api.java.en.When;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertFalse;
+
 
 public class RentStepdefs {
     private RentACarSupport rentACarSupport;
@@ -16,9 +18,9 @@ public class RentStepdefs {
         rentACarSupport.createCars(availableCars);
     }
 
-    @When("^I rent one to my customer$")
-    public void i_rent_one_to_my_customer() throws Throwable {
-        rentACarSupport.rentACar();
+    @When("^I rent (\\d+) to my customer$")
+    public void i_rent_to_my_customer(int rentCars) throws Throwable {
+        rentACarSupport.rentCars(rentCars);
     }
 
     @Then("^there will only be (\\d+) cars available for rental$")
@@ -31,15 +33,16 @@ public class RentStepdefs {
     public void all_cars_has_been_rented_to_customers(int num) throws Throwable {
     	rentACarSupport = new RentACarSupport();
     	rentACarSupport.createCars(num);
-        for(int i = 0; i < num; i ++){
-        	rentACarSupport.rentACar();
-        }
+//        for(int i = 0; i < num; i ++){
+//        	rentACarSupport.rentACar();
+//        }
+    	rentACarSupport.rentCars(num);
         assertThat(rentACarSupport.getAvailableNumberOfCars(), is(0));
     }
 
-    @When("^another customer request to rent a car$")
-    public void another_customer_request_to_rent_a_car() throws Throwable {
-    	rentACarSupport.rentACar();
+    @When("^another customer request to rent (\\d+) car$")
+    public void another_customer_request_to_rent_car(int rentCars) throws Throwable {
+    	rentACarSupport.rentCars(rentCars);
     }
 
     @Then("^the request should be denied and there will still be (\\d+) cars available$")
@@ -56,9 +59,9 @@ public class RentStepdefs {
 
     @When("^I rent (\\d+) cars to my customer$")
     public void i_rent_cars_to_my_customer(int num) throws Throwable {
-        for(int i = 0; i < num; i++){
-        	rentACarSupport.rentACar();
-        }        	
+//        for(int i = 0; i < num; i++){
+        	rentACarSupport.rentCars(num);
+//    }	
     }
 
     @Then("^the revenue should became (\\d+)$")
@@ -75,9 +78,9 @@ public class RentStepdefs {
 
     @When("^(\\d+) cars were rented$")
     public void cars_were_rented(int num) throws Throwable {
-    	for(int i = 0; i < num; i++){
-        	rentACarSupport.rentACar();
-        } 
+//    	for(int i = 0; i < num; i++){
+        	rentACarSupport.rentCars(num);
+//        } 
     }
 
     @Then("^the total assets of the company should became (\\d+)$")
@@ -94,14 +97,35 @@ public class RentStepdefs {
 
     @When("^(\\d+) cars were rented to customer$")
     public void cars_were_rented_to_customer(int num) throws Throwable {
-    	for(int i = 0; i < num; i++){
-        	rentACarSupport.rentACar();
-        }
+//    	for(int i = 0; i < num; i++){
+        	rentACarSupport.rentCars(num);
+//        }
     }
 
     @Then("^the revenue should be counted for the available cars, which are (\\d+)$")
     public void the_revenue_should_be_counted_for_the_available_cars_which_are(int amt) throws Throwable {
     	int revenue = rentACarSupport.getRevenue();
     	assertThat(revenue, is(amt));
+    }
+    
+//    Given only 5 cars can be rented
+//    When one customer requests to rent 7 car
+//    Then sorry, there are less than 7 cars for rental
+    
+    @Given("^only (\\d+) cars can be rented$")
+    public void only_cars_can_be_rented(int availableCars) throws Throwable {
+    	rentACarSupport = new RentACarSupport();
+        rentACarSupport.createCars(availableCars);
+    }
+
+    @When("^one customer requests to rent (\\d+) car$")
+    public void one_customer_requests_to_rent_cars(int rentCars) throws Throwable {
+        rentACarSupport.rentCars(rentCars);
+    }
+
+    @Then("^sorry, there should be (\\d+) more cars for rental$")
+    public void there_are_less_than_cars_for_rental(int moreCars) throws Throwable {
+        int actualAvailableCars = rentACarSupport.getAvailableNumberOfCars();
+        assertFalse(actualAvailableCars >= moreCars);
     }
 }
