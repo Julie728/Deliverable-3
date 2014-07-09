@@ -1,10 +1,10 @@
-Feature: Rental cars should be possible to rent to gain revenue to the rental company.
+Feature: User should be able to rent 
 
-  As an owner of a car rental company
-  I want to make cars available for renting
-  So I can use it 
+  As an user of a car rental company
+  I want to rent cars
+  So I can use the rented car
 
   Scenario: Find and rent a car
-    Given there are more than 1 car available for rental
-    When I request to rent car
+    Given there are 18 cars available for rental
+    When I rent one
     Then there will only be 17 cars available for rental
