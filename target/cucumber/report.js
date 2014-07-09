@@ -39,7 +39,7 @@ formatter.match({
   "location": "RentStepdefs.the_beginning_revenue_is_and_there_are_enough_available_cars(int)"
 });
 formatter.result({
-  "duration": 97022213,
+  "duration": 103500926,
   "status": "passed"
 });
 formatter.match({
@@ -52,7 +52,7 @@ formatter.match({
   "location": "RentStepdefs.i_rent_cars_to_my_customer(int)"
 });
 formatter.result({
-  "duration": 419598,
+  "duration": 255684,
   "status": "passed"
 });
 formatter.match({
@@ -65,7 +65,7 @@ formatter.match({
   "location": "RentStepdefs.the_revenue_should_became(int)"
 });
 formatter.result({
-  "duration": 7019662,
+  "duration": 2837569,
   "status": "passed"
 });
 formatter.scenario({
@@ -101,7 +101,7 @@ formatter.match({
   "location": "RentStepdefs.the_company_have_cars_available(int)"
 });
 formatter.result({
-  "duration": 222780,
+  "duration": 147916,
   "status": "passed"
 });
 formatter.match({
@@ -114,7 +114,7 @@ formatter.match({
   "location": "RentStepdefs.cars_were_rented_to_customer(int)"
 });
 formatter.result({
-  "duration": 177801,
+  "duration": 88146,
   "status": "passed"
 });
 formatter.match({
@@ -127,7 +127,7 @@ formatter.match({
   "location": "RentStepdefs.the_revenue_should_be_counted_for_the_available_cars_which_are(int)"
 });
 formatter.result({
-  "duration": 158783,
+  "duration": 108069,
   "status": "passed"
 });
 formatter.scenario({
@@ -163,7 +163,7 @@ formatter.match({
   "location": "RentStepdefs.the_company_have_cars_and_the_begins_at_zero_revenue(int)"
 });
 formatter.result({
-  "duration": 211309,
+  "duration": 225798,
   "status": "passed"
 });
 formatter.match({
@@ -176,7 +176,7 @@ formatter.match({
   "location": "RentStepdefs.cars_were_rented(int)"
 });
 formatter.result({
-  "duration": 455521,
+  "duration": 115616,
   "status": "passed"
 });
 formatter.match({
@@ -189,7 +189,7 @@ formatter.match({
   "location": "RentStepdefs.the_total_assets_of_the_company_should_became(int)"
 });
 formatter.result({
-  "duration": 147916,
+  "duration": 150632,
   "status": "passed"
 });
 formatter.uri("Rent.feature");
@@ -233,7 +233,7 @@ formatter.match({
   "location": "RentStepdefs.there_are_cars_available_for_rental(int)"
 });
 formatter.result({
-  "duration": 199234,
+  "duration": 209799,
   "status": "passed"
 });
 formatter.match({
@@ -246,7 +246,7 @@ formatter.match({
   "location": "RentStepdefs.i_rent_to_my_customer(int)"
 });
 formatter.result({
-  "duration": 124974,
+  "duration": 90259,
   "status": "passed"
 });
 formatter.match({
@@ -259,7 +259,7 @@ formatter.match({
   "location": "RentStepdefs.there_will_be_less_cars_available_for_rental(int)"
 });
 formatter.result({
-  "duration": 159085,
+  "duration": 89051,
   "status": "passed"
 });
 formatter.scenario({
@@ -295,7 +295,7 @@ formatter.match({
   "location": "RentStepdefs.all_cars_has_been_rented_to_customers(int)"
 });
 formatter.result({
-  "duration": 251155,
+  "duration": 228514,
   "status": "passed"
 });
 formatter.match({
@@ -308,7 +308,7 @@ formatter.match({
   "location": "RentStepdefs.another_customer_request_to_rent_car(int)"
 });
 formatter.result({
-  "duration": 111691,
+  "duration": 116522,
   "status": "passed"
 });
 formatter.match({
@@ -321,7 +321,7 @@ formatter.match({
   "location": "RentStepdefs.the_request_should_be_denied_and_there_will_still_be_cars_available(int)"
 });
 formatter.result({
-  "duration": 104447,
+  "duration": 118333,
   "status": "passed"
 });
 formatter.scenario({
@@ -357,7 +357,7 @@ formatter.match({
   "location": "RentStepdefs.only_cars_can_be_rented(int)"
 });
 formatter.result({
-  "duration": 184442,
+  "duration": 283756,
   "status": "passed"
 });
 formatter.match({
@@ -370,7 +370,7 @@ formatter.match({
   "location": "RentStepdefs.one_customer_requests_to_rent_cars(int)"
 });
 formatter.result({
-  "duration": 130709,
+  "duration": 161198,
   "status": "passed"
 });
 formatter.match({
@@ -383,7 +383,7 @@ formatter.match({
   "location": "RentStepdefs.there_are_less_than_cars_for_rental(int)"
 });
 formatter.result({
-  "duration": 127087,
+  "duration": 151840,
   "status": "passed"
 });
 formatter.uri("Return.feature");
@@ -427,7 +427,7 @@ formatter.match({
   "location": "RentStepdefs.cars_are_available_for_rental(int)"
 });
 formatter.result({
-  "duration": 272588,
+  "duration": 1332450,
   "status": "passed"
 });
 formatter.match({
@@ -440,7 +440,7 @@ formatter.match({
   "location": "RentStepdefs.customer_returns_cars(int)"
 });
 formatter.result({
-  "duration": 139464,
+  "duration": 143690,
   "status": "passed"
 });
 formatter.match({
@@ -453,7 +453,7 @@ formatter.match({
   "location": "RentStepdefs.there_will_be_more_cars_available_for_rental(int)"
 });
 formatter.result({
-  "duration": 172065,
+  "duration": 118634,
   "status": "passed"
 });
 formatter.scenario({
@@ -466,7 +466,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 13,
-  "name": "1 cars are available in stock previously",
+  "name": "2 cars are available in stock previously",
   "keyword": "Given "
 });
 formatter.step({
@@ -476,20 +476,20 @@ formatter.step({
 });
 formatter.step({
   "line": 15,
-  "name": "the customer can successfully rent cars and there will still be 2 car available",
+  "name": "the customer can successfully rent cars and there will still be 3 car available",
   "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "1",
+      "val": "2",
       "offset": 0
     }
   ],
   "location": "RentStepdefs.cars_are_available_in_stock_previously(int)"
 });
 formatter.result({
-  "duration": 167235,
+  "duration": 337188,
   "status": "passed"
 });
 formatter.match({
@@ -506,20 +506,20 @@ formatter.match({
   "location": "RentStepdefs.one_customer_requests_another_customer_returns(int,int)"
 });
 formatter.result({
-  "duration": 163915,
+  "duration": 198328,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "2",
+      "val": "3",
       "offset": 64
     }
   ],
   "location": "RentStepdefs.can_successfully_rent_cars_and_still_available_cars(int)"
 });
 formatter.result({
-  "duration": 107767,
+  "duration": 146708,
   "status": "passed"
 });
 formatter.scenario({
@@ -555,7 +555,7 @@ formatter.match({
   "location": "RentStepdefs.the_revenue_of_charging_one_customer_previously(int)"
 });
 formatter.result({
-  "duration": 195007,
+  "duration": 234251,
   "status": "passed"
 });
 formatter.match({
@@ -568,7 +568,7 @@ formatter.match({
   "location": "RentStepdefs.the_customer_returns_cars(int)"
 });
 formatter.result({
-  "duration": 144293,
+  "duration": 136143,
   "status": "passed"
 });
 formatter.match({
@@ -581,7 +581,69 @@ formatter.match({
   "location": "RentStepdefs.there_are_more_cars_should_be_returned(int)"
 });
 formatter.result({
-  "duration": 152745,
+  "duration": 213421,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 22,
+  "name": "Total number of cars should be returned",
+  "description": "",
+  "id": "customers-could-return-rented-cars;total-number-of-cars-should-be-returned",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 23,
+  "name": "one customer rented 3 cars at first time",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 24,
+  "name": "the customer rented 4 cars at second time",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 25,
+  "name": "the customer should return 7 cars in total",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 20
+    }
+  ],
+  "location": "RentStepdefs.one_customer_rented_cars_at_first_time(int)"
+});
+formatter.result({
+  "duration": 268663,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "4",
+      "offset": 20
+    }
+  ],
+  "location": "RentStepdefs.the_customer_rented_cars_at_second_time(int)"
+});
+formatter.result({
+  "duration": 116219,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "7",
+      "offset": 27
+    }
+  ],
+  "location": "RentStepdefs.the_customer_shoud_return_cars_in_total(int)"
+});
+formatter.result({
+  "duration": 540345,
   "status": "passed"
 });
 });

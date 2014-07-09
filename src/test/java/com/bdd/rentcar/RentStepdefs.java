@@ -185,7 +185,24 @@ public class RentStepdefs {
     	assertThat(difference, is(expected));
     }
     
+    //scenario 4
+    @Given("^one customer rented (\\d+) cars at first time$")
+    public void one_customer_rented_cars_at_first_time(int firstRent){
+    	rentACarSupport = new RentACarSupport();
+        rentACarSupport.createCars(0);
+        rentACarSupport.returnCars(firstRent);
+    }
     
+    @When("^the customer rented (\\d+) cars at second time$")
+    public void the_customer_rented_cars_at_second_time(int secondRent){
+    	rentACarSupport.returnCars(secondRent);
+    	
+    }
     
+    @Then("^the customer should return (\\d+) cars in total$")
+    public void the_customer_shoud_return_cars_in_total(int expectedTotal){
+    	int shouldReturnTotal = rentACarSupport.getAvailableNumberOfCars();
+    	assertThat(shouldReturnTotal, is(expectedTotal));
+    }
     
 }
