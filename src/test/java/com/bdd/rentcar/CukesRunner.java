@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 		)
 public class CukesRunner {
 	public void testMethod(){
-		System.out.println("test git push try 3");
+		System.out.println("test git push try 4");
 	}
 
 }
