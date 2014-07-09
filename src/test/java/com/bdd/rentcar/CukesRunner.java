@@ -9,8 +9,5 @@ import org.junit.runner.RunWith;
 		features="src/test/resources"
 		)
 public class CukesRunner {
-	public void testMethod(){
-		System.out.println("test git push try 4");
-	}
-
+	
 }
