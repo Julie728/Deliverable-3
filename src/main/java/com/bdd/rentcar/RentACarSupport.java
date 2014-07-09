@@ -21,4 +21,12 @@ public class RentACarSupport {
     public int getAvailableNumberOfCars() {
         return carDatabase.getNumberOfAvailableCars();
     }
+    
+    public int getRevenue() {
+        return carDatabase.getRevenue();
+    }
+    
+    public int getCompanyAssets(){
+    	return carDatabase.getCompanyAssets();
+    }
 }

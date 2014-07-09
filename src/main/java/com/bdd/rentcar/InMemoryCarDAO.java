@@ -5,6 +5,9 @@ import java.util.List;
 
 public class InMemoryCarDAO implements CarDAO {
     private List<Car> cars = new LinkedList<Car>();
+    private double revenue = 0;
+    private final static int FEE = 10;
+    private final static int CAR_VALUE = 12000;
 
     public void add(Car car) {
         cars.add(car);
@@ -13,6 +16,7 @@ public class InMemoryCarDAO implements CarDAO {
     public Car findAvailableCar() {
         for (Car car : cars) {
             if (!car.isRented()) {
+            	revenue += FEE;
                 return car;
             }
         }
@@ -29,7 +33,11 @@ public class InMemoryCarDAO implements CarDAO {
         return availableCars;
     }
     
-//    public void resetCars(){
-//    	cars = null;
-//    }
+    public int getRevenue(){
+    	return (int) revenue;
+    }
+    
+    public int getCompanyAssets(){
+    	return (int) (cars.size() * CAR_VALUE + revenue);
+    }
 }

@@ -13,5 +13,3 @@ Feature: Rental cars should be possible to rent
     Given all 6 cars has been rented to customers
     When another customer request to rent a car  
     Then the request should be denied and there will still be 0 cars available
-    
-    

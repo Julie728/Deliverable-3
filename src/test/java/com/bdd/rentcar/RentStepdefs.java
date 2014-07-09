@@ -1,10 +1,8 @@
 package com.bdd.rentcar;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.junit.Cucumber;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -49,7 +47,61 @@ public class RentStepdefs {
     	int actualAvailableCars = rentACarSupport.getAvailableNumberOfCars();
         assertThat(actualAvailableCars, is(num));
     }
-
     
+    @Given("^the beginning revenue is (\\d+) and there are enough available cars$")
+    public void the_beginning_revenue_is_and_there_are_enough_available_cars(int arg1) throws Throwable {
+    	rentACarSupport = new RentACarSupport();
+    	rentACarSupport.createCars(100);
+    }
 
+    @When("^I rent (\\d+) cars to my customer$")
+    public void i_rent_cars_to_my_customer(int num) throws Throwable {
+        for(int i = 0; i < num; i++){
+        	rentACarSupport.rentACar();
+        }        	
+    }
+
+    @Then("^the revenue should became (\\d+)$")
+    public void the_revenue_should_became(int amt) throws Throwable {
+    	int revenue = rentACarSupport.getRevenue();
+    	assertThat(revenue, is(amt));
+    }
+
+    @Given("^the company have (\\d+) cars and the begins at zero revenue$")
+    public void the_company_have_cars_and_the_begins_at_zero_revenue(int arg1) throws Throwable {
+    	rentACarSupport = new RentACarSupport();
+    	rentACarSupport.createCars(10);
+    }
+
+    @When("^(\\d+) cars were rented$")
+    public void cars_were_rented(int num) throws Throwable {
+    	for(int i = 0; i < num; i++){
+        	rentACarSupport.rentACar();
+        } 
+    }
+
+    @Then("^the total assets of the company should became (\\d+)$")
+    public void the_total_assets_of_the_company_should_became(int amt) throws Throwable {
+    	int assets = rentACarSupport.getCompanyAssets();
+    	assertThat(assets, is(amt));
+    }
+    
+    @Given("^the company have (\\d+) cars available$")
+    public void the_company_have_cars_available(int num) throws Throwable {
+    	rentACarSupport = new RentACarSupport();
+    	rentACarSupport.createCars(num);
+    }
+
+    @When("^(\\d+) cars were rented to customer$")
+    public void cars_were_rented_to_customer(int num) throws Throwable {
+    	for(int i = 0; i < num; i++){
+        	rentACarSupport.rentACar();
+        }
+    }
+
+    @Then("^the revenue should be counted for the available cars, which are (\\d+)$")
+    public void the_revenue_should_be_counted_for_the_available_cars_which_are(int amt) throws Throwable {
+    	int revenue = rentACarSupport.getRevenue();
+    	assertThat(revenue, is(amt));
+    }
 }
