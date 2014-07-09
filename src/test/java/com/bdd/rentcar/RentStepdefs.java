@@ -11,6 +11,7 @@ import static org.junit.Assert.assertFalse;
 
 public class RentStepdefs {
     private RentACarSupport rentACarSupport;
+    private RentACarSupport rentACarReturn;
 
     //RENT CAR
     
@@ -126,11 +127,7 @@ public class RentStepdefs {
     }
     
     //RETURN CAR
-    //scenario 1
-//    Given 25 cars are available for rental 
-//    When cumstomer returns 3 cars
-//    Then there will be 28 cars available for rental
-    
+    //scenario 1 
     @Given("^(\\d+) cars are available for rental$")
     public void cars_are_available_for_rental(int availableCars) throws Throwable {
     	rentACarSupport = new RentACarSupport();
@@ -149,10 +146,6 @@ public class RentStepdefs {
     }
     
     //scenario 2
-//    Given 0 cars are available in stock previously
-//    When one customer returns 2 cars, another customer requests to rent 1 
-//    Then the customer can successfully rent cars and there will still be 1 car available
-    
     @Given("^(\\d+) cars are available in stock previously$")
     public void cars_are_available_in_stock_previously(int availableCars) throws Throwable {
     	rentACarSupport = new RentACarSupport();
@@ -172,10 +165,6 @@ public class RentStepdefs {
     }
     
     //scenario 3
-//    Given the revenue of charging one customer is 70
-//    When the customer returns 5 cars
-//    there are 2 more cars should be returned
-    
     @Given("^the revenue of charging one customer was (\\d+) previously$")
     public void the_revenue_of_charging_one_customer_previously (int feeCharge){
     	rentACarSupport = new RentACarSupport();
@@ -184,14 +173,15 @@ public class RentStepdefs {
     
     @When("^the customer returns (\\d+) cars$")
     public void the_customer_returns_cars(int returnCars){
-    	rentACarSupport.createCars(returnCars);
+    	rentACarReturn = new RentACarSupport();
+    	rentACarReturn.createCars(returnCars);
     }
     
     @Then("^there are (\\d+) more cars should be returned$")
     public void there_are_more_cars_should_be_returned(int expected){
     	int shouldReturnCars = rentACarSupport.getNumberOfCarsReturn();
-    	int actualReturnCars = rentACarSupport.getAvailableNumberOfCars();
-    	int difference = shouldReturnCars-actualReturnCars;
+    	int actualReturnCars = rentACarReturn.getAvailableNumberOfCars();
+    	int difference =  shouldReturnCars - actualReturnCars;
     	assertThat(difference, is(expected));
     }
     

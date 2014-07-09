@@ -35,11 +35,12 @@ public class InMemoryCarDAO implements CarDAO {
      
 
     public void setRevenueOfReturn (int feeCharge){
-    	revenue = feeCharge;
+    	this.revenue = (double) feeCharge;
     }
     
     public int getNumberOfCarsReturn(){
-    	return (int) revenue/FEE;
+    	int numberReturn = (int) revenue/FEE;
+    	return numberReturn;
     }
     
     public int getRevenue(){

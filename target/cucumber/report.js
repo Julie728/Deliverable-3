@@ -1,33 +1,33 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("ChargeFee.feature");
 formatter.feature({
-  "id": "rental-cars-should-bring-revenue-for-the-company",
-  "description": "\nAs an owner of a car rental company\nI want charge fee for rented cars\nSo I can earn money",
+  "line": 1,
   "name": "Rental cars should bring revenue for the company",
-  "keyword": "Feature",
-  "line": 1
+  "description": "\nAs an owner of a car rental company\nI want charge fee for rented cars\nSo I can earn money",
+  "id": "rental-cars-should-bring-revenue-for-the-company",
+  "keyword": "Feature"
 });
 formatter.scenario({
-  "id": "rental-cars-should-bring-revenue-for-the-company;charge-for-renting-2-cars",
-  "description": "",
-  "name": "charge for renting 2 cars",
-  "keyword": "Scenario",
   "line": 7,
-  "type": "scenario"
+  "name": "charge for renting 2 cars",
+  "description": "",
+  "id": "rental-cars-should-bring-revenue-for-the-company;charge-for-renting-2-cars",
+  "type": "scenario",
+  "keyword": "Scenario"
 });
 formatter.step({
+  "line": 8,
   "name": "the beginning revenue is 0 and there are enough available cars",
-  "keyword": "Given ",
-  "line": 8
+  "keyword": "Given "
 });
 formatter.step({
+  "line": 9,
   "name": "I rent 2 cars to my customer",
-  "keyword": "When ",
-  "line": 9
+  "keyword": "When "
 });
 formatter.step({
+  "line": 10,
   "name": "the revenue should became 20",
-  "keyword": "Then ",
-  "line": 10
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -39,7 +39,7 @@ formatter.match({
   "location": "RentStepdefs.the_beginning_revenue_is_and_there_are_enough_available_cars(int)"
 });
 formatter.result({
-  "duration": 134713000,
+  "duration": 97022213,
   "status": "passed"
 });
 formatter.match({
@@ -52,7 +52,7 @@ formatter.match({
   "location": "RentStepdefs.i_rent_cars_to_my_customer(int)"
 });
 formatter.result({
-  "duration": 285000,
+  "duration": 419598,
   "status": "passed"
 });
 formatter.match({
@@ -65,31 +65,31 @@ formatter.match({
   "location": "RentStepdefs.the_revenue_should_became(int)"
 });
 formatter.result({
-  "duration": 6430000,
+  "duration": 7019662,
   "status": "passed"
 });
 formatter.scenario({
-  "id": "rental-cars-should-bring-revenue-for-the-company;charge-for-renting-available-cars-if-requested-cars-out-number-the-available-ones",
-  "description": "",
-  "name": "charge for renting available cars if requested cars out number the available ones",
-  "keyword": "Scenario",
   "line": 12,
-  "type": "scenario"
+  "name": "charge for renting available cars if requested cars out number the available ones",
+  "description": "",
+  "id": "rental-cars-should-bring-revenue-for-the-company;charge-for-renting-available-cars-if-requested-cars-out-number-the-available-ones",
+  "type": "scenario",
+  "keyword": "Scenario"
 });
 formatter.step({
+  "line": 13,
   "name": "the company have 5 cars available",
-  "keyword": "Given ",
-  "line": 13
+  "keyword": "Given "
 });
 formatter.step({
+  "line": 14,
   "name": "10 cars were rented to customer",
-  "keyword": "When ",
-  "line": 14
+  "keyword": "When "
 });
 formatter.step({
+  "line": 15,
   "name": "the revenue should be counted for the available cars, which are 50",
-  "keyword": "Then ",
-  "line": 15
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -101,7 +101,7 @@ formatter.match({
   "location": "RentStepdefs.the_company_have_cars_available(int)"
 });
 formatter.result({
-  "duration": 183000,
+  "duration": 222780,
   "status": "passed"
 });
 formatter.match({
@@ -114,7 +114,7 @@ formatter.match({
   "location": "RentStepdefs.cars_were_rented_to_customer(int)"
 });
 formatter.result({
-  "duration": 120000,
+  "duration": 177801,
   "status": "passed"
 });
 formatter.match({
@@ -127,31 +127,31 @@ formatter.match({
   "location": "RentStepdefs.the_revenue_should_be_counted_for_the_available_cars_which_are(int)"
 });
 formatter.result({
-  "duration": 100000,
+  "duration": 158783,
   "status": "passed"
 });
 formatter.scenario({
-  "id": "rental-cars-should-bring-revenue-for-the-company;get-total-assets-of-the-company",
-  "description": "",
-  "name": "get total assets of the company",
-  "keyword": "Scenario",
   "line": 17,
-  "type": "scenario"
+  "name": "get total assets of the company",
+  "description": "",
+  "id": "rental-cars-should-bring-revenue-for-the-company;get-total-assets-of-the-company",
+  "type": "scenario",
+  "keyword": "Scenario"
 });
 formatter.step({
+  "line": 18,
   "name": "the company have 10 cars and the begins at zero revenue",
-  "keyword": "Given ",
-  "line": 18
+  "keyword": "Given "
 });
 formatter.step({
+  "line": 19,
   "name": "5 cars were rented",
-  "keyword": "When ",
-  "line": 19
+  "keyword": "When "
 });
 formatter.step({
+  "line": 20,
   "name": "the total assets of the company should became 120050",
-  "keyword": "Then ",
-  "line": 20
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -163,7 +163,7 @@ formatter.match({
   "location": "RentStepdefs.the_company_have_cars_and_the_begins_at_zero_revenue(int)"
 });
 formatter.result({
-  "duration": 278000,
+  "duration": 211309,
   "status": "passed"
 });
 formatter.match({
@@ -176,7 +176,7 @@ formatter.match({
   "location": "RentStepdefs.cars_were_rented(int)"
 });
 formatter.result({
-  "duration": 175000,
+  "duration": 455521,
   "status": "passed"
 });
 formatter.match({
@@ -189,39 +189,39 @@ formatter.match({
   "location": "RentStepdefs.the_total_assets_of_the_company_should_became(int)"
 });
 formatter.result({
-  "duration": 204000,
+  "duration": 147916,
   "status": "passed"
 });
 formatter.uri("Rent.feature");
 formatter.feature({
-  "id": "rental-cars-should-be-possible-to-rent",
-  "description": "\nAs an owner of a car rental company\nI want to make cars available for renting\nSo I can rent them to clients",
+  "line": 1,
   "name": "Rental cars should be possible to rent",
-  "keyword": "Feature",
-  "line": 1
+  "description": "\nAs an owner of a car rental company\nI want to make cars available for renting\nSo I can rent them to clients",
+  "id": "rental-cars-should-be-possible-to-rent",
+  "keyword": "Feature"
 });
 formatter.scenario({
-  "id": "rental-cars-should-be-possible-to-rent;find-and-rent-a-car",
-  "description": "",
-  "name": "Find and rent a car",
-  "keyword": "Scenario",
   "line": 7,
-  "type": "scenario"
+  "name": "Find and rent a car",
+  "description": "",
+  "id": "rental-cars-should-be-possible-to-rent;find-and-rent-a-car",
+  "type": "scenario",
+  "keyword": "Scenario"
 });
 formatter.step({
+  "line": 8,
   "name": "there are 18 cars available for rental",
-  "keyword": "Given ",
-  "line": 8
+  "keyword": "Given "
 });
 formatter.step({
+  "line": 9,
   "name": "I rent 1 to my customer",
-  "keyword": "When ",
-  "line": 9
+  "keyword": "When "
 });
 formatter.step({
+  "line": 10,
   "name": "there will only be 17 cars available for rental",
-  "keyword": "Then ",
-  "line": 10
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -233,7 +233,7 @@ formatter.match({
   "location": "RentStepdefs.there_are_cars_available_for_rental(int)"
 });
 formatter.result({
-  "duration": 233000,
+  "duration": 199234,
   "status": "passed"
 });
 formatter.match({
@@ -246,7 +246,7 @@ formatter.match({
   "location": "RentStepdefs.i_rent_to_my_customer(int)"
 });
 formatter.result({
-  "duration": 139000,
+  "duration": 124974,
   "status": "passed"
 });
 formatter.match({
@@ -259,31 +259,31 @@ formatter.match({
   "location": "RentStepdefs.there_will_be_less_cars_available_for_rental(int)"
 });
 formatter.result({
-  "duration": 201000,
+  "duration": 159085,
   "status": "passed"
 });
 formatter.scenario({
-  "id": "rental-cars-should-be-possible-to-rent;deny-rent-request-when-no-available-car",
-  "description": "",
-  "name": "Deny rent request when no available car",
-  "keyword": "Scenario",
   "line": 12,
-  "type": "scenario"
+  "name": "Deny rent request when no available car",
+  "description": "",
+  "id": "rental-cars-should-be-possible-to-rent;deny-rent-request-when-no-available-car",
+  "type": "scenario",
+  "keyword": "Scenario"
 });
 formatter.step({
+  "line": 13,
   "name": "all 6 cars has been rented to customers",
-  "keyword": "Given ",
-  "line": 13
+  "keyword": "Given "
 });
 formatter.step({
+  "line": 14,
   "name": "another customer request to rent 1 car",
-  "keyword": "When ",
-  "line": 14
+  "keyword": "When "
 });
 formatter.step({
+  "line": 15,
   "name": "the request should be denied and there will still be 0 cars available",
-  "keyword": "Then ",
-  "line": 15
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -295,7 +295,7 @@ formatter.match({
   "location": "RentStepdefs.all_cars_has_been_rented_to_customers(int)"
 });
 formatter.result({
-  "duration": 314000,
+  "duration": 251155,
   "status": "passed"
 });
 formatter.match({
@@ -308,7 +308,7 @@ formatter.match({
   "location": "RentStepdefs.another_customer_request_to_rent_car(int)"
 });
 formatter.result({
-  "duration": 171000,
+  "duration": 111691,
   "status": "passed"
 });
 formatter.match({
@@ -321,31 +321,31 @@ formatter.match({
   "location": "RentStepdefs.the_request_should_be_denied_and_there_will_still_be_cars_available(int)"
 });
 formatter.result({
-  "duration": 180000,
+  "duration": 104447,
   "status": "passed"
 });
 formatter.scenario({
-  "id": "rental-cars-should-be-possible-to-rent;not-enough-cars-for-rental",
-  "description": "",
-  "name": "Not enough cars for rental",
-  "keyword": "Scenario",
   "line": 17,
-  "type": "scenario"
+  "name": "Not enough cars for rental",
+  "description": "",
+  "id": "rental-cars-should-be-possible-to-rent;not-enough-cars-for-rental",
+  "type": "scenario",
+  "keyword": "Scenario"
 });
 formatter.step({
+  "line": 18,
   "name": "only 5 cars can be rented",
-  "keyword": "Given ",
-  "line": 18
+  "keyword": "Given "
 });
 formatter.step({
+  "line": 19,
   "name": "the customer requests to rent 7",
-  "keyword": "When ",
-  "line": 19
+  "keyword": "When "
 });
 formatter.step({
+  "line": 20,
   "name": "sorry, there should be 2 more cars for rental",
-  "keyword": "Then ",
-  "line": 20
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -357,7 +357,7 @@ formatter.match({
   "location": "RentStepdefs.only_cars_can_be_rented(int)"
 });
 formatter.result({
-  "duration": 322000,
+  "duration": 184442,
   "status": "passed"
 });
 formatter.match({
@@ -370,7 +370,7 @@ formatter.match({
   "location": "RentStepdefs.one_customer_requests_to_rent_cars(int)"
 });
 formatter.result({
-  "duration": 190000,
+  "duration": 130709,
   "status": "passed"
 });
 formatter.match({
@@ -383,39 +383,39 @@ formatter.match({
   "location": "RentStepdefs.there_are_less_than_cars_for_rental(int)"
 });
 formatter.result({
-  "duration": 182000,
+  "duration": 127087,
   "status": "passed"
 });
 formatter.uri("Return.feature");
 formatter.feature({
-  "id": "the-rented-cars-could-be-returned",
-  "description": "\nAs an owner of a car rental company\nI want to make rented cars to be returned\nSo I can continue to rent cars to other customers",
-  "name": "The rented cars could be returned",
-  "keyword": "Feature",
-  "line": 1
+  "line": 1,
+  "name": "Customers could return rented cars",
+  "description": "\r\nAs an owner of a car rental company\r\nI want to make rented cars available for returning\r\nSo I can rent them to other clients",
+  "id": "customers-could-return-rented-cars",
+  "keyword": "Feature"
 });
 formatter.scenario({
-  "id": "the-rented-cars-could-be-returned;respond-to-return-cars",
-  "description": "",
-  "name": "Respond to return cars",
-  "keyword": "Scenario",
   "line": 7,
-  "type": "scenario"
+  "name": "Find and rent a car",
+  "description": "",
+  "id": "customers-could-return-rented-cars;find-and-rent-a-car",
+  "type": "scenario",
+  "keyword": "Scenario"
 });
 formatter.step({
+  "line": 8,
   "name": "25 cars are available for rental",
-  "keyword": "Given ",
-  "line": 8
+  "keyword": "Given "
 });
 formatter.step({
+  "line": 9,
   "name": "cumstomer returns 3 cars",
-  "keyword": "When ",
-  "line": 9
+  "keyword": "When "
 });
 formatter.step({
+  "line": 10,
   "name": "there will be 28 cars available for rental",
-  "keyword": "Then ",
-  "line": 10
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -427,7 +427,7 @@ formatter.match({
   "location": "RentStepdefs.cars_are_available_for_rental(int)"
 });
 formatter.result({
-  "duration": 202000,
+  "duration": 272588,
   "status": "passed"
 });
 formatter.match({
@@ -440,7 +440,7 @@ formatter.match({
   "location": "RentStepdefs.customer_returns_cars(int)"
 });
 formatter.result({
-  "duration": 141000,
+  "duration": 139464,
   "status": "passed"
 });
 formatter.match({
@@ -453,31 +453,31 @@ formatter.match({
   "location": "RentStepdefs.there_will_be_more_cars_available_for_rental(int)"
 });
 formatter.result({
-  "duration": 130000,
+  "duration": 172065,
   "status": "passed"
 });
 formatter.scenario({
-  "id": "the-rented-cars-could-be-returned;available-when-cars-are-returned",
-  "description": "",
-  "name": "Available when cars are returned",
-  "keyword": "Scenario",
   "line": 12,
-  "type": "scenario"
+  "name": "Return cars to make them available",
+  "description": "",
+  "id": "customers-could-return-rented-cars;return-cars-to-make-them-available",
+  "type": "scenario",
+  "keyword": "Scenario"
 });
 formatter.step({
+  "line": 13,
   "name": "1 cars are available in stock previously",
-  "keyword": "Given ",
-  "line": 13
+  "keyword": "Given "
 });
 formatter.step({
-  "name": "one customer requests to rent 3 and another customer returns 4",
-  "keyword": "When ",
-  "line": 14
+  "line": 14,
+  "name": "one customer requests to rent 4 and another customer returns 5",
+  "keyword": "When "
 });
 formatter.step({
+  "line": 15,
   "name": "the customer can successfully rent cars and there will still be 2 car available",
-  "keyword": "Then ",
-  "line": 15
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -489,24 +489,24 @@ formatter.match({
   "location": "RentStepdefs.cars_are_available_in_stock_previously(int)"
 });
 formatter.result({
-  "duration": 162000,
+  "duration": 167235,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "3",
+      "val": "4",
       "offset": 30
     },
     {
-      "val": "4",
+      "val": "5",
       "offset": 61
     }
   ],
   "location": "RentStepdefs.one_customer_requests_another_customer_returns(int,int)"
 });
 formatter.result({
-  "duration": 122000,
+  "duration": 163915,
   "status": "passed"
 });
 formatter.match({
@@ -519,31 +519,31 @@ formatter.match({
   "location": "RentStepdefs.can_successfully_rent_cars_and_still_available_cars(int)"
 });
 formatter.result({
-  "duration": 105000,
+  "duration": 107767,
   "status": "passed"
 });
 formatter.scenario({
-  "id": "the-rented-cars-could-be-returned;return-all-the-cars-rented",
-  "description": "",
-  "name": "Return all the cars rented",
-  "keyword": "Scenario",
   "line": 17,
-  "type": "scenario"
+  "name": "Return correct number of cars",
+  "description": "",
+  "id": "customers-could-return-rented-cars;return-correct-number-of-cars",
+  "type": "scenario",
+  "keyword": "Scenario"
 });
 formatter.step({
+  "line": 18,
   "name": "the revenue of charging one customer was 70 previously",
-  "keyword": "Given ",
-  "line": 18
+  "keyword": "Given "
 });
 formatter.step({
+  "line": 19,
   "name": "the customer returns 5 cars",
-  "keyword": "When ",
-  "line": 19
+  "keyword": "When "
 });
 formatter.step({
+  "line": 20,
   "name": "there are 2 more cars should be returned",
-  "keyword": "Then ",
-  "line": 20
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -555,7 +555,7 @@ formatter.match({
   "location": "RentStepdefs.the_revenue_of_charging_one_customer_previously(int)"
 });
 formatter.result({
-  "duration": 255000,
+  "duration": 195007,
   "status": "passed"
 });
 formatter.match({
@@ -568,7 +568,7 @@ formatter.match({
   "location": "RentStepdefs.the_customer_returns_cars(int)"
 });
 formatter.result({
-  "duration": 122000,
+  "duration": 144293,
   "status": "passed"
 });
 formatter.match({
@@ -581,8 +581,7 @@ formatter.match({
   "location": "RentStepdefs.there_are_more_cars_should_be_returned(int)"
 });
 formatter.result({
-  "duration": 1879000,
-  "status": "failed",
-  "error_message": "java.lang.AssertionError: \nExpected: is \u003c2\u003e\n     but: was \u003c-5\u003e\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)\n\tat org.junit.Assert.assertThat(Assert.java:865)\n\tat org.junit.Assert.assertThat(Assert.java:832)\n\tat com.bdd.rentcar.RentStepdefs.there_are_more_cars_should_be_returned(RentStepdefs.java:195)\n\tat ✽.Then there are 2 more cars should be returned(Return.feature:20)\n"
+  "duration": 152745,
+  "status": "passed"
 });
 });
