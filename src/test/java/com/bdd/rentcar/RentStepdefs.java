@@ -6,7 +6,7 @@ import cucumber.api.java.en.When;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 
 public class RentStepdefs {
@@ -14,8 +14,8 @@ public class RentStepdefs {
     private RentACarSupport rentACarReturn;
 
     //RENT CAR
-    
     //scenario 1
+    //less cars available after rental
     @Given("^there are (\\d+) cars available for rental$")
     public void there_are_cars_available_for_rental(int availableCars) throws Throwable {
     	rentACarSupport = new RentACarSupport();
@@ -34,6 +34,7 @@ public class RentStepdefs {
     }
     
     //scenario 2
+    //no cars available for rental at all
     @Given("^all (\\d+) cars has been rented to customers$")
     public void all_cars_has_been_rented_to_customers(int num) throws Throwable {
     	rentACarSupport = new RentACarSupport();
@@ -54,6 +55,7 @@ public class RentStepdefs {
     }
     
     //scenario 3
+    //not enough cars for rental, the requested are more than available
     @Given("^only (\\d+) cars can be rented$")
     public void only_cars_can_be_rented(int availableCars) throws Throwable {
     	rentACarSupport = new RentACarSupport();
@@ -66,13 +68,14 @@ public class RentStepdefs {
     }
 
     @Then("^sorry, there should be (\\d+) more cars for rental$")
-    public void there_are_less_than_cars_for_rental(int moreCars) throws Throwable {
+    public void there_should_be_more_cars_for_rental(int moreCars) throws Throwable {
         int actualAvailableCars = rentACarSupport.getAvailableNumberOfCars();
-        assertFalse(actualAvailableCars >= moreCars);
+        assertTrue(actualAvailableCars <= moreCars);
     }
    
     //CHARGE FEE
     //scenario 1
+    //charge rental fee and enlarge the revenue
     @Given("^the beginning revenue is (\\d+) and there are enough available cars$")
     public void the_beginning_revenue_is_and_there_are_enough_available_cars(int arg1) throws Throwable {
     	rentACarSupport = new RentACarSupport();
@@ -91,6 +94,7 @@ public class RentStepdefs {
     }
 
     //scenario 2
+    //calculate the assets after rental
     @Given("^the company have (\\d+) cars and the begins at zero revenue$")
     public void the_company_have_cars_and_the_begins_at_zero_revenue(int arg1) throws Throwable {
     	rentACarSupport = new RentACarSupport();
@@ -109,6 +113,7 @@ public class RentStepdefs {
     }
     
     //scenario 3
+    //get the revenue of certain amount of cars rented
     @Given("^the company have (\\d+) cars available$")
     public void the_company_have_cars_available(int num) throws Throwable {
     	rentACarSupport = new RentACarSupport();
@@ -128,6 +133,7 @@ public class RentStepdefs {
     
     //RETURN CAR
     //scenario 1 
+    //more cars available for rental after returning 
     @Given("^(\\d+) cars are available for rental$")
     public void cars_are_available_for_rental(int availableCars) throws Throwable {
     	rentACarSupport = new RentACarSupport();
@@ -146,6 +152,7 @@ public class RentStepdefs {
     }
     
     //scenario 2
+    //not enough cars available for rental previously, but after return more, it becomes enough
     @Given("^(\\d+) cars are available in stock previously$")
     public void cars_are_available_in_stock_previously(int availableCars) throws Throwable {
     	rentACarSupport = new RentACarSupport();
@@ -165,6 +172,7 @@ public class RentStepdefs {
     }
     
     //scenario 3
+    //get the number of cars that should be returned according to the revenue charged
     @Given("^the revenue of charging one customer was (\\d+) previously$")
     public void the_revenue_of_charging_one_customer_previously (int feeCharge){
     	rentACarSupport = new RentACarSupport();
@@ -186,6 +194,7 @@ public class RentStepdefs {
     }
     
     //scenario 4
+    //calculate the total cars that should be returned
     @Given("^one customer rented (\\d+) cars at first time$")
     public void one_customer_rented_cars_at_first_time(int firstRent){
     	rentACarSupport = new RentACarSupport();

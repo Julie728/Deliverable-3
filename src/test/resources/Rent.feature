@@ -14,7 +14,7 @@ Feature: Rental cars should be possible to rent
     When another customer request to rent 1 car  
     Then the request should be denied and there will still be 0 cars available
     
-  Scenario: Not enough cars for rental
+  Scenario: Deny request when not enough cars for rental
     Given only 5 cars can be rented
     When the customer requests to rent 7
     Then sorry, there should be 2 more cars for rental

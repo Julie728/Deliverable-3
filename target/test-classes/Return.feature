@@ -4,7 +4,7 @@ Feature: Customers could return rented cars
   I want to make rented cars available for returning
   So I can rent them to other clients
   
-   Scenario: Find and rent a car
+   Scenario: Return rented cars
    Given 25 cars are available for rental 
    When cumstomer returns 3 cars
    Then there will be 28 cars available for rental
@@ -19,7 +19,7 @@ Feature: Customers could return rented cars
    When the customer returns 5 cars
    Then there are 2 more cars should be returned
    
-   Scenario: Total number of cars should be returned
+   Scenario: Calculate total number of cars should be returned
    Given one customer rented 3 cars at first time
    When the customer rented 4 cars at second time
    Then the customer should return 7 cars in total
