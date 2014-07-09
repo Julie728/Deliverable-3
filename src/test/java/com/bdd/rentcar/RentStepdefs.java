@@ -171,6 +171,31 @@ public class RentStepdefs {
         assertThat(actualAvailableCars, is(expectedAvailableCars));
     }
     
+    //scenario 3
+//    Given the revenue of charging one customer is 70
+//    When the customer returns 5 cars
+//    there are 2 more cars should be returned
+    
+    @Given("^the revenue of charging one customer was (\\d+) previously$")
+    public void the_revenue_of_charging_one_customer_previously (int feeCharge){
+    	rentACarSupport = new RentACarSupport();
+    	rentACarSupport.setRevenueOfReturn(feeCharge);	
+    }
+    
+    @When("^the customer returns (\\d+) cars$")
+    public void the_customer_returns_cars(int returnCars){
+    	rentACarSupport.createCars(returnCars);
+    }
+    
+    @Then("^there are (\\d+) more cars should be returned$")
+    public void there_are_more_cars_should_be_returned(int expected){
+    	int shouldReturnCars = rentACarSupport.getNumberOfCarsReturn();
+    	int actualReturnCars = rentACarSupport.getAvailableNumberOfCars();
+    	int difference = shouldReturnCars-actualReturnCars;
+    	assertThat(difference, is(expected));
+    }
+    
+    
     
     
 }

@@ -28,6 +28,15 @@ public class RentACarSupport {
     	}
 
     }
+    
+    public void setRevenueOfReturn(int feeCharge){
+    	carDatabase = new InMemoryCarDAO();
+    	carDatabase.setRevenueOfReturn(feeCharge);
+        }
+    	
+    public int getNumberOfCarsReturn() {
+    	return carDatabase.getNumberOfCarsReturn();
+    }
 
     public int getAvailableNumberOfCars() {
         return carDatabase.getNumberOfAvailableCars();
