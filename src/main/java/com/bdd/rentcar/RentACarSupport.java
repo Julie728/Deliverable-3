@@ -11,16 +11,16 @@ public class RentACarSupport {
         }
     }
 
-//    public void rentACar() {
-//        Car car = carDatabase.findAvailableCar();
-//        if(car != null){
-//        	car.rent();
-//        }  
-//    }
+    public void returnCars(int returnCars) {
+        for (int i = 0; i < returnCars; i++) {
+            Car car = new Car();
+            carDatabase.add(car);
+        }
+    }
+
     public void rentCars(int rentCars) {
     	for(int i = 0; i< rentCars; i++){
-            Car car = new Car();
-            car = carDatabase.findAvailableCar();
+            Car car = carDatabase.findAvailableCar();
             if (car == null) {
             	break;
             }

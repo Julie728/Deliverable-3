@@ -16,5 +16,5 @@ Feature: Rental cars should be possible to rent
     
   Scenario: Not enough cars for rental
     Given only 5 cars can be rented
-    When the customer requests to rent 7 car
+    When the customer requests to rent 7
     Then sorry, there should be 2 more cars for rental
